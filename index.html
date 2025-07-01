@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Nav -->
+    <nav class="bg-blue-900 text-white p-4 flex justify-between">
+        <h1 class="text-xl font-bold">Dummy Website</h1>
+        <ul class="flex gap-6">
+            <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+            <li><a href="#" class="hover:text-yellow-300">Videos</a></li>
+            <li><a href="#" class="hover:text-yellow-300">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- hero section -->
+
+    <header class="text-center py-16 bg-gradient-to-r from-blue-600 to-cyan-400 text-white">
+        <h2 class="text-4xl font-bold mb-4">Basic Video Page</h2>
+        <p class="text-lg">Lets see the sample</p>
+    </header>
+
+    <!-- video section -->
+
+    <section class="flex flex-col items-center py-12 px-4">
+        <h3 class="text-2xl font-semibold mb-6">A Video</h3>
+        <video class="w-full max-w-3xl rounded shadow-lg" controls>
+            <source src="./video/sample.mp4" type="video/mp4" />
+            <track src="./video/subtitles.vtt" kind="subtitles" srclang="en" label="English" default />
+            Your browser does not supports the video tag.
+        </video>
+    </section>
+</body>
+
+</html>
