@@ -1,6 +1,4 @@
-Certainly! Here is a complete, ready-to-use **README.md** file for your project, written as a single Markdown file:
 
-```markdown
 # Nature's Symphony – Northeast India Gallery
 
 A visually-rich, responsive gallery website showcasing the natural wonders of Northeast India.  
@@ -101,10 +99,3 @@ MIT License
 
 > Made with ❤️ for the beauty of Northeast India.
 ```
-
-**How to use:**  
-- Copy and save this as `README.md` in your project root.
-- Update the repository URL and any other details as needed.
-- Add screenshots or a demo link for extra polish!
-
-Let me know if you want to include deployment instructions or a screenshot section.
