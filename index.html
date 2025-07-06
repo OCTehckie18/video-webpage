@@ -2,50 +2,137 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Nature's Symphony</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- Nav -->
-    <nav class="bg-blue-900 text-white p-4 flex justify-between">
-        <h1 class="text-xl font-bold">Dummy Website</h1>
-        <ul class="flex gap-6">
-            <li><a href="#" class="hover:text-yellow-300">Home</a></li>
-            <li><a href="#" class="hover:text-yellow-300">Videos</a></li>
-            <li><a href="#" class="hover:text-yellow-300">About</a></li>
-        </ul>
-    </nav>
+  <!-- Navigation Bar -->
+  <nav class="bg-green-900 text-white p-4 flex items-center justify-between">
+    <h1 class="text-xl font-bold flex items-center gap-2">
+      <i class="fas fa-leaf"></i> Nature Symphony
+    </h1>
+    <!-- Hamburger Button -->
+    <button class="md:hidden focus:outline-none" id="menuBtn" aria-label="Open Menu">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+    <!-- Desktop Menu -->
+    <ul id="menu" class="hidden md:flex items-center gap-6">
+      <li><a href="./index.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-home"></i>Home</a></li>
+      <li><a href="./places.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-map-marker-alt"></i>Places</a></li>
+      <li><a href="./gallery.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-images"></i>Gallery</a></li>
+      <li><a href="./contact.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-cyan-50">
+    <ul class="flex flex-col gap-4">
+      <li><a href="./index.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-home"></i>Home</a></li>
+      <li><a href="./places.html" class="flex items-center gap-2 hover:text-yellow-300 font-bold underline"><i
+            class="fas fa-map-marker-alt"></i>Places</a></li>
+      <li><a href="./gallery.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-images"></i>Gallery</a></li>
+      <li><a href="./contact.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </div>
 
-    <!-- hero section -->
+  <!-- Hero Section -->
+  <header class="relative text-center py-20 px-4 bg-cover bg-center"
+    style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-r from-green-700/70 to-cyan-400/70"></div>
+    <div class="relative z-10">
+      <h2 class="text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Explore Northeast India's Natural Wonders</h2>
+      <p class="text-xl text-cyan-100 mb-8">Discover breathtaking places and experience the symphony of nature in the
+        Seven Sisters.</p>
+    </div>
+  </header>
+  <!-- Video and Audio Section -->
+  <section class="flex flex-col items-center py-12 px-4 bg-white">
+    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+      <i class="fas fa-video"></i> Watch Northeast India Promo
+    </h3>
+    <video class="w-full max-w-3xl rounded shadow-lg mb-6" controls>
+      <source src="./video/ne_promo.mp4" type="video/mp4" />
+      <track src="./video/ne_promo.vtt" kind="subtitles" srclang="en" label="English" default />
+      Your browser does not support the video tag.
+    </video>
+    <div class="p-6 w-full max-w-3xl">
+      <label class="block mb-2 font-semibold text-green-900"><i class="fas fa-music"></i> Vibes of Northeast</label>
+      <audio src="./video/ne_music.mp3" type="audio/mp3" controls></audio>
+    </div>
+  </section>
+  
+  <!-- Top Places Section -->
+  <section class="py-12 px-4 bg-cyan-50">
+    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-2 text-green-800">
+      <i class="fas fa-map-marker-alt"></i> Must-Visit Natural Destinations
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div
+        class="bg-white rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105">
+        <a href="https://en.wikipedia.org/wiki/Living_root_bridge">
+          <img src="https://www.india.com/wp-content/uploads/2022/07/living-root-bridge.jpg" alt="Meghalaya"
+            class="w-full h-32 object-cover rounded mb-3">
+          <span class="font-bold text-green-900">Living Root Bridges, Meghalaya</span>
+          <p class="text-sm text-gray-700 mt-2 text-center">Marvel at centuries-old bridges grown from living roots in
+            the
+            lush rainforests of Cherrapunji.</p>
+        </a>
+      </div>
+      <div
+        class="bg-white rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105">
+        <a href="https://en.wikipedia.org/wiki/Kaziranga_National_Park">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdpNbvtjadaluKqWcu4D1wxjmY6guVc8WJTg&s"
+            alt="Kaziranga" class="w-full h-32 object-cover rounded mb-3">
+          <span class="font-bold text-green-900">Kaziranga National Park, Assam</span>
+          <p class="text-sm text-gray-700 mt-2 text-center">Home to the one-horned rhinoceros and a UNESCO World
+            Heritage
+            Site teeming with wildlife.</p>
+        </a>
+      </div>
+      <div
+        class="bg-white rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105">
+        <a href="https://en.wikipedia.org/wiki/Ziro">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLlkvo6ZdH5BelX65HYpPKAmj1OKEGG7P4A&s"
+            alt="Ziro Valley" class="w-full h-32 object-cover rounded mb-3">
+          <span class="font-bold text-green-900">Ziro Valley, Arunachal Pradesh</span>
+          <p class="text-sm text-gray-700 mt-2 text-center">A tranquil valley known for its pine-clad hills, rice
+            fields,
+            and the vibrant Apatani culture.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <header class="text-center py-16 bg-gradient-to-r from-blue-600 to-cyan-400 text-white">
-        <h2 class="text-4xl font-bold mb-4">Basic Video Page</h2>
-        <p class="text-lg">Lets see the sample</p>
-        <div class="p-10">
-            <button class="w-30 h-10 shadow-lg rounded bg-gray-100 text-center text-gray-900">Explore Now</button>
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white text-center py-6 mt-8">
+    <div class="flex flex-col items-center gap-2">
+      <span class="font-bold flex items-center gap-2"><i class="fas fa-leaf"></i> Nature Symphony</span>
+      <span class="text-sm">&copy; 2025 Nature Symphony. All rights reserved.</span>
+    </div>
+  </footer>
 
-        </div>
-    </header>
-
-    <!-- video section -->
-
-    <section class="flex flex-col items-center py-12 px-4">
-        <h3 class="text-2xl font-semibold mb-6">A Video</h3>
-        <video class="w-full max-w-3xl rounded shadow-lg" controls>
-            <source src="./video/sample.mp4" type="video/mp4" />
-            <track src="./video/subtitles.vtt" kind="subtitles" srclang="en" label="English" default />
-            Your browser does not supports the video tag.
-        </video>
-        
-        <div class="p-10">
-        <audio src="" type="audio/mp3" class="" controls></audio>
-
-        </div>
-    </section>
+  <!-- JavaScript for Navbar -->
+  <script>
+    // Hamburger menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Nature's Symphony</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+
+  <!-- Navigation Bar -->
+  <nav class="bg-green-900 text-white p-4 flex items-center justify-between">
+    <h1 class="text-xl font-bold flex items-center gap-2">
+      <i class="fas fa-leaf"></i> Nature Symphony
+    </h1>
+    <!-- Hamburger Button -->
+    <button class="md:hidden focus:outline-none" id="menuBtn" aria-label="Open Menu">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+    <!-- Desktop Menu -->
+    <ul id="menu" class="hidden md:flex items-center gap-6">
+      <li><a href="./index.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-home"></i>Home</a></li>
+      <li><a href="./places.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-map-marker-alt"></i>Places</a></li>
+      <li><a href="./gallery.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-images"></i>Gallery</a></li>
+      <li><a href="./contact.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-cyan-50">
+    <ul class="flex flex-col gap-4">
+      <li><a href="./index.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-home"></i>Home</a></li>
+      <li><a href="./places.html" class="flex items-center gap-2 hover:text-yellow-300 font-bold underline"><i
+            class="fas fa-map-marker-alt"></i>Places</a></li>
+      <li><a href="./gallery.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-images"></i>Gallery</a></li>
+      <li><a href="./contact.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </div>
+
+  <header class="relative text-center py-20 px-4 bg-cover bg-center"
+    style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-r from-green-900/80 to-cyan-500/70"></div>
+    <div class="relative z-10">
+      <h2 class="text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Send us a Message!</h2>
+      <p class="text-xl text-cyan-100 mb-8">Discover the lush valleys, majestic hills, and vibrant culture of the Seven
+        Sisters</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="py-12 px-4 bg-white min-h-screen">
+    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-2 text-green-800">
+      <i class="fas fa-envelope"></i> Contact Us
+    </h3>
+    <form class="max-w-md mx-auto bg-green-50 rounded shadow p-6 flex flex-col gap-4">
+      <div>
+        <label class="block text-green-900 font-semibold mb-1" for="name">Name</label>
+        <input type="text" id="name"
+          class="w-full rounded border border-green-200 p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+          required>
+      </div>
+      <div>
+        <label class="block text-green-900 font-semibold mb-1" for="email">Email</label>
+        <input type="email" id="email"
+          class="w-full rounded border border-green-200 p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+          required>
+      </div>
+      <div>
+        <label class="block text-green-900 font-semibold mb-1" for="message">Message</label>
+        <textarea id="message" rows="3"
+          class="w-full rounded border border-green-200 p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+          required></textarea>
+      </div>
+      <button type="submit"
+        class="bg-green-700 text-white font-bold py-2 rounded hover:bg-green-800 transition flex items-center justify-center gap-2">
+        <i class="fas fa-paper-plane"></i> Send Message
+      </button>
+    </form>
+  </section>
+</body>
+
+</html>

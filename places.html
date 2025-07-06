@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Places | Nature of Northeast India</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Simple Carousel Styles */
+    .carousel-img {
+      display: none;
+    }
+
+    .carousel-img.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+
+  <!-- Navigation Bar -->
+  <nav class="bg-green-900 text-white p-4 flex items-center justify-between">
+    <h1 class="text-xl font-bold flex items-center gap-2">
+      <i class="fas fa-leaf"></i> Nature Symphony
+    </h1>
+    <!-- Hamburger Button -->
+    <button class="md:hidden focus:outline-none" id="menuBtn" aria-label="Open Menu">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+    <!-- Desktop Menu -->
+    <ul id="menu" class="hidden md:flex items-center gap-6">
+      <li><a href="./index.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-home"></i>Home</a></li>
+      <li><a href="./places.html" class="flex items-center gap-2 hover:text-yellow-300 font-bold underline"><i
+            class="fas fa-map-marker-alt"></i>Places</a></li>
+      <li><a href="./gallery.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-images"></i>Gallery</a></li>
+      <li><a href="./contact.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-cyan-50">
+    <ul class="flex flex-col gap-4">
+      <li><a href="./index.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-home"></i>Home</a></li>
+      <li><a href="./places.html" class="flex items-center gap-2 hover:text-yellow-300 font-bold underline"><i
+            class="fas fa-map-marker-alt"></i>Places</a></li>
+      <li><a href="./gallery.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-images"></i>Gallery</a></li>
+      <li><a href="./contact.html" class="flex items-center gap-2 hover:text-yellow-300"><i
+            class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="relative text-center py-20 px-4 bg-cover bg-center"
+    style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-r from-green-900/80 to-cyan-500/70"></div>
+    <div class="relative z-10">
+      <h2 class="text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Representatives of Northeast India</h2>
+      <p class="text-xl text-cyan-100 mb-8">Meet the Seven Sisters and One Brother!</p>
+    </div>
+  </header>
+
+  <section class="py-12 px-4 bg-white">
+    <h3 class="text-2xl font-semibold mb-8 flex items-center gap-2 text-green-800">
+      <i class="fas fa-map-marker-alt"></i> The Eight States of Northeast India
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Arunachal Pradesh -->
+      <a href="https://en.wikipedia.org/wiki/Arunachal_Pradesh" target="_blank" rel="noopener noreferrer"
+        class="bg-pink-100 rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-pink-300">
+        <img src="https://www.esikkimtourism.in/wp-content/uploads/2024/12/Arunachal-Pradesh-Tawang.jpg"
+          alt="Arunachal Pradesh" class="w-full h-32 object-cover rounded mb-3">
+        <span class="font-bold text-green-900">Arunachal Pradesh</span>
+        <p class="text-sm text-gray-700 mt-2 text-center">Land of the Dawn-lit Mountains, home to Tawang Monastery and
+          stunning valleys.</p>
+      </a>
+      <!-- Assam -->
+      <a href="https://en.wikipedia.org/wiki/Assam" target="_blank" rel="noopener noreferrer"
+        class="bg-pink-100 rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-pink-300">
+        <img
+          src="https://shillongtraveltaxi.in/wp-content/uploads/2024/06/assam-tour-assam-tour-packages-guwahati-touring.jpg"
+          alt="Assam" class="w-full h-32 object-cover rounded mb-3">
+        <span class="font-bold text-green-900">Assam</span>
+        <p class="text-sm text-gray-700 mt-2 text-center">Known for Kaziranga National Park, tea gardens, and the mighty
+          Brahmaputra.</p>
+      </a>
+      <!-- Manipur -->
+      <a href="https://en.wikipedia.org/wiki/Manipur" target="_blank" rel="noopener noreferrer"
+        class="bg-pink-100 rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-pink-300">
+        <img src="https://static.toiimg.com/photo/msid-64976943,width-96,height-65.cms" alt="Manipur"
+          class="w-full h-32 object-cover rounded mb-3">
+        <span class="font-bold text-green-900">Manipur</span>
+        <p class="text-sm text-gray-700 mt-2 text-center">Famous for Loktak Lake, floating islands, and vibrant culture.
+        </p>
+      </a>
+      <!-- Meghalaya -->
+      <a href="https://en.wikipedia.org/wiki/Meghalaya" target="_blank" rel="noopener noreferrer"
+        class="bg-pink-100 rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-pink-300">
+        <img src="https://travenjo.com/wp-content/uploads/2022/06/Seven-Sisters-Falls-1-gaimg.jpg?x58748"
+          alt="Meghalaya" class="w-full h-32 object-cover rounded mb-3">
+        <span class="font-bold text-green-900">Meghalaya</span>
+        <p class="text-sm text-gray-700 mt-2 text-center">Abode of Clouds, home to Living Root Bridges and Nohkalikai
+          Falls.</p>
+      </a>
+      <!-- Mizoram -->
+      <a href="https://en.wikipedia.org/wiki/Mizoram" target="_blank" rel="noopener noreferrer"
+        class="bg-pink-100 rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-pink-300">
+        <img
+          src="https://s7ap1.scene7.com/is/image/incredibleindia/champhai-churches-champhai-mizoram-2-attr-hero?qlt=82&ts=1726674796123"
+          alt="Mizoram" class="w-full h-32 object-cover rounded mb-3">
+        <span class="font-bold text-green-900">Mizoram</span>
+        <p class="text-sm text-gray-700 mt-2 text-center">Land of rolling hills, bamboo forests, and vibrant festivals.
+        </p>
+      </a>
+      <!-- Nagaland -->
+      <a href="https://en.wikipedia.org/wiki/Nagaland" target="_blank" rel="noopener noreferrer"
+        class="bg-pink-100 rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-pink-300">
+        <img
+          src="https://i0.wp.com/kaziranganationalparkassam.in/wp-content/uploads/2018/08/aaa-kaushikaaa.jpg?resize=648%2C432&ssl=1"
+          alt="Nagaland" class="w-full h-32 object-cover rounded mb-3">
+        <span class="font-bold text-green-900">Nagaland</span>
+        <p class="text-sm text-gray-700 mt-2 text-center">Known for its tribal culture, Hornbill Festival, and scenic
+          villages.</p>
+      </a>
+      <!-- Tripura -->
+      <a href="https://en.wikipedia.org/wiki/Tripura" target="_blank" rel="noopener noreferrer"
+        class="bg-pink-100 rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-pink-300">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRW_hFs0aM1G0U-BDDHhu0TnSeeSakQww6NA&s"
+          alt="Tripura" class="w-full h-32 object-cover rounded mb-3">
+        <span class="font-bold text-green-900">Tripura</span>
+        <p class="text-sm text-gray-700 mt-2 text-center">Famous for Neermahal Palace, temples, and lush green
+          landscapes.</p>
+      </a>
+      <!-- Sikkim -->
+      <a href="https://en.wikipedia.org/wiki/Sikkim" target="_blank" rel="noopener noreferrer"
+        class="bg-yellow-100 rounded shadow p-5 flex flex-col items-center transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:bg-yellow-300">
+        <img
+          src="https://nomadicweekends.com/blog/wp-content/uploads/2019/03/Lachung-City-In-between-the-Mountain-Ranges.jpg"
+          alt="Sikkim" class="w-full h-32 object-cover rounded mb-3">
+        <span class="font-bold text-green-900">Sikkim</span>
+        <p class="text-sm text-gray-700 mt-2 text-center">The only brother, known for Gangtok, Kanchenjunga, and
+          monasteries.</p>
+      </a>
+    </div>
+  </section>
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white text-center py-6 mt-8">
+    <div class="flex flex-col items-center gap-2">
+      <span class="font-bold flex items-center gap-2"><i class="fas fa-leaf"></i> Nature NE India</span>
+      <span class="text-sm">&copy; 2025 Nature of Northeast India. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Carousel & API Script -->
+  <script>
+    // Carousel logic with Unsplash API (replace with your API key)
+    const carousel = document.getElementById('carousel');
+    const loadingMsg = document.getElementById('loadingMsg');
+    let photos = [];
+    let current = 0;
+
+    // Fetch beautiful photos of Northeast India from Unsplash API
+    fetch('https://api.unsplash.com/search/photos?query=northeast%20india%20nature&per_page=7&client_id=7mdsByU7J-2j2koZFZ542YUm6nPbEpAwbBkoEl0cZT8')
+      .then(res => res.json())
+      .then(data => {
+        photos = data.results;
+        if (photos.length === 0) {
+          loadingMsg.textContent = 'No photos found.';
+          return;
+        }
+        loadingMsg.remove();
+        showPhoto(current);
+      })
+      .catch(() => {
+        loadingMsg.textContent = 'Failed to load photos. Try again later.';
+      });
+
+    function showPhoto(idx) {
+      carousel.innerHTML = `
+        <img src="${photos[idx].urls.regular}" alt="${photos[idx].alt_description || 'Northeast India'}" 
+          class="carousel-img active w-full h-72 object-cover rounded transition" />
+        <div class="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 rounded text-sm">
+          ${photos[idx].description || photos[idx].alt_description || 'Northeast India'}
+        </div>
+      `;
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (photos.length === 0) return;
+      current = (current - 1 + photos.length) % photos.length;
+      showPhoto(current);
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (photos.length === 0) return;
+      current = (current + 1) % photos.length;
+      showPhoto(current);
+    });
+  </script>
+</body>
+
+</html>
